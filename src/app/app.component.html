@@ -1,0 +1,19 @@
+<igx-navbar class="app-bar">
+  <div igxNavbarTitle>
+    <button igxButton="flat" igxButtonColor="var(--igx-surface-500)" [disabled]="false" routerLink="/view1" class="button">
+      <span>ヒアリング項目</span>
+    </button>
+    <button igxButton="flat" igxButtonColor="var(--igx-surface-500)" [disabled]="false" routerLink="/view2" class="button">
+      <span>View 2</span>
+    </button>
+    <button igxButton="flat" igxButtonColor="var(--igx-surface-500)" [disabled]="false" routerLink="/view3" class="button">
+      <span>View 3</span>
+    </button>
+  </div>
+  <button igxButton="icon" igxButtonColor="var(--igx-surface-500)" type="icon" [disabled]="false" class="icon-button">
+    <igx-icon>person</igx-icon>
+  </button>
+</igx-navbar>
+<div class="views-container">
+  <router-outlet></router-outlet>
+</div>

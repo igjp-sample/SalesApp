@@ -1,0 +1,75 @@
+<div class="column-layout column">
+  <h5 class="title">ヒアリング項目</h5>
+  <button (click)="copyToClipboard()" igxButton="fab" type="fab" [disabled]="false" [igxToggleAction]="dialogWindow" class="floating-action-button">
+    <igx-icon>cloud_download</igx-icon>
+  </button>
+  <igx-dialog [closeOnOutsideSelect]="true" [closeOnEscape]="true" (onLeftButtonSelect)="dialogWindow.toggle()" (onRightButtonSelect)="dialogWindow.toggle()" #dialogWindow class="dialog-window">
+    <igx-dialog-title>コピーしました</igx-dialog-title>
+    <div igxDialogActions>
+      <button igxButton="raised" [disabled]="false" [igxToggleAction]="dialogWindow" class="button">
+        <span>OK</span>
+      </button>
+    </div>
+    <div>
+      <p class="text">Salesforceのメモなどに張り付けしてください。</p>
+    </div>
+  </igx-dialog>
+  <div class="item-container">
+    <igx-checkbox (click)="check1.checked ? visibleStates[0] = true : visibleStates[0] = false" #check1 [checked]="false" [disabled]="false" labelPosition="after" class="checkbox">製品評価を行う背景（どのような課題があるか）</igx-checkbox>
+    <igx-input-group type="border" class="text-area" *ngIf="visibleStates[0]">
+      <label igxLabel for="textField"></label>
+      <textarea igxInput name="textField" [required]="false" [(ngModel)]="text[0].val" [disabled]="false"></textarea>
+    </igx-input-group>
+  </div>
+  <div class="item-container">
+    <igx-checkbox (click)="check2.checked ? visibleStates[1] = true : visibleStates[1] = false" #check2  [checked]="false" [disabled]="false" labelPosition="after" class="checkbox">プロジェクト概要（どの様な画面があるか）</igx-checkbox>
+    <igx-input-group type="border" class="text-area" *ngIf="visibleStates[1]">
+      <label igxLabel for="textField"></label>
+      <textarea igxInput name="textField" [required]="false" [(ngModel)]="text[1].val" [disabled]="false"></textarea>
+    </igx-input-group>
+  </div>
+  <div class="item-container">
+    <igx-checkbox (click)="check3.checked ? visibleStates[2] = true : visibleStates[2] = false" #check3  [checked]="false" [disabled]="false" labelPosition="after" class="checkbox">評価対象（評価製品・評価コポーネント・評価ポイント）</igx-checkbox>
+    <igx-input-group type="border" class="text-area" *ngIf="visibleStates[2]">
+      <label igxLabel for="textField"></label>
+      <textarea igxInput name="textField" [required]="false" [(ngModel)]="text[2].val" [disabled]="false"></textarea>
+    </igx-input-group>
+  </div>
+  <div class="item-container">
+    <igx-checkbox (click)="check4.checked ? visibleStates[3] = true : visibleStates[3] = false" #check4  [checked]="false" [disabled]="false" labelPosition="after" class="checkbox">評価期間・プロジェクトのタイムライン</igx-checkbox>
+    <igx-input-group type="border" class="text-area" *ngIf="visibleStates[3]">
+      <label igxLabel for="textField"></label>
+      <textarea igxInput name="textField" [required]="false" [(ngModel)]="text[3].val" [disabled]="false"></textarea>
+    </igx-input-group>
+  </div>
+  <div class="item-container">
+    <igx-checkbox (click)="check5.checked ? visibleStates[4] = true : visibleStates[4] = false" #check5  [checked]="false" [disabled]="false" labelPosition="after" class="checkbox">カウンターパートのお役割/お立場</igx-checkbox>
+    <igx-input-group type="border" class="text-area" *ngIf="visibleStates[4]">
+      <label igxLabel for="textField"></label>
+      <textarea igxInput name="textField" [required]="false" [(ngModel)]="text[4].val" [disabled]="false"></textarea>
+      <igx-hint>製品導入における決裁者が他にいるか、具体的に誰か</igx-hint>
+    </igx-input-group>
+  </div>
+  <div class="item-container">
+    <igx-checkbox (click)="check6.checked ? visibleStates[5] = true : visibleStates[5] = false" #check6  [checked]="false" [disabled]="false" labelPosition="after" class="checkbox">開発規模（予算・開発者数）</igx-checkbox>
+    <igx-input-group type="border" class="text-area" *ngIf="visibleStates[5]">
+      <label igxLabel for="textField"></label>
+      <textarea igxInput name="textField" [required]="false" [(ngModel)]="text[5].val" [disabled]="false"></textarea>
+      <igx-hint>特にフロントエンドの開発者数</igx-hint>
+    </igx-input-group>
+  </div>
+  <div class="item-container">
+    <igx-checkbox (click)="check7.checked ? visibleStates[6] = true : visibleStates[6] = false" #check7  [checked]="false" [disabled]="false" labelPosition="after" class="checkbox">競合</igx-checkbox>
+    <igx-input-group type="border" class="text-area" *ngIf="visibleStates[6]">
+      <label igxLabel for="textField"></label>
+      <textarea igxInput name="textField" [required]="false" [(ngModel)]="text[6].val" [disabled]="false"></textarea>
+    </igx-input-group>
+  </div>
+  <div class="item-container">
+    <igx-checkbox (click)="check8.checked ? visibleStates[7] = true : visibleStates[7] = false" #check8  [checked]="false" [disabled]="false" labelPosition="after" class="checkbox">どのようにIGを知ったか</igx-checkbox>
+    <igx-input-group type="border" class="text-area" *ngIf="visibleStates[7]">
+      <label igxLabel for="textField"></label>
+      <textarea igxInput name="textField" [required]="false" [(ngModel)]="text[7].val" [disabled]="false"></textarea>
+    </igx-input-group>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+:host {
+  display: flex;
+  align-items: stretch;
+}
+.column-layout {
+  align-items: center;
+  overflow: auto;
+  position: relative;
+  padding: 30px 100px;
+  min-width: 50px;
+  min-height: 50px;
+  flex: 1 1 auto;
+  background-color: var(--igx-surface-500);
+}
+.title {
+  margin: 0 0 30px;
+  width: max-content;
+  height: max-content;
+}
+.text {
+  min-width: min-content;
+  flex: 0 0 auto;
+  height: max-content;
+}
+.floating-action-button {
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+  z-index: 1;
+  width: max-content;
+  height: max-content;
+  flex: 0 0 auto;
+}
+.text-area {
+  width: 100%;
+  margin: 0;
+  max-width: 600px;
+  min-width: min-content;
+  height: max-content;
+  flex: 0 0 auto;
+}
+.checkbox {
+  width: max-content;
+  height: max-content;
+  flex: 0 0 auto;
+}
+.button {
+  min-width: min-content;
+  height: max-content;
+  flex: 0 0 auto;
+}
+.dialog-window {
+  min-width: 0;
+  min-height: 0;
+  flex: 0 0 auto;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+textarea.igx-input-group__textarea {
+  font-size: 0.8rem;
+}
+.item-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 0 20px;
+}
+::ng-deep {
+  .igx-button--fab {
+    padding: 0;
+  }
+}
